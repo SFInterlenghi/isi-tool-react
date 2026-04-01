@@ -2,10 +2,7 @@ import { useStore } from '../store/useStore';
 import SectionHeader from '../components/SectionHeader';
 import { extractParams, npvAtPrice } from '../utils/finance';
 import { formatSmart } from '../utils/formatters';
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, ScatterChart, Scatter, Cell
-} from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Cell } from 'recharts';
 
 const tooltipStyle = { backgroundColor: '#161b22', borderColor: '#21262d', color: '#e6edf3' };
 
