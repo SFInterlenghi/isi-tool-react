@@ -1,7 +1,7 @@
 import { useStore } from '../store/useStore';
 import SectionHeader from '../components/SectionHeader';
 import { extractParams, computeIndicators } from '../utils/finance';
-import { formatSmart, formatPercent, formatNumber } from '../utils/formatters';
+import { formatSmart, formatPercent } from '../utils/formatters';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, BarChart, Bar } from 'recharts';
 
 const PALETTE = ["#e6a817", "#58a6ff", "#3fb950", "#f85149"];
@@ -21,7 +21,7 @@ export default function ScenarioComparison() {
 
   const maxLen = Math.max(...results.map(r => r.ind.acpvs.length));
   const cfData = Array.from({ length: maxLen }, (_, i) => {
-    const row: any = { year: i - (results[0]?.p.epc_yrs + 1 ?? 3) };
+    const row: any = { year: i - (results[0] ? results[0].p.epc_yrs + 1 : 3) };
     results.forEach(r => {
       if (i < r.ind.acpvs.length) row[r.name] = r.ind.acpvs[i] / 1e6;
     });
