@@ -1,6 +1,6 @@
 import { useStore } from '../store/useStore';
 import SectionHeader from '../components/SectionHeader';
-import { extractParams, npvAtPrice, buildCfArrays } from '../utils/finance';
+import { extractParams, npvAtPrice } from '../utils/finance';
 import { formatSmart } from '../utils/formatters';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
