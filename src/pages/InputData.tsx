@@ -30,7 +30,7 @@ export default function InputData() {
 
       <SectionHeader title="Scenario Selection" />
       <div className="flex gap-3 items-center">
-        {names.map((name, i) => (
+        {names.map((name) => (
           <button
             key={name}
             onClick={() => setActiveScenario(name)}
