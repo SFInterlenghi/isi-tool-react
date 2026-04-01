@@ -87,7 +87,7 @@ export default function CashFlow() {
       </div>
 
       <div className="flex gap-3">
-        {names.map((name, i) => (
+        {names.map((name) => (
           <button
             key={name}
             onClick={() => setActiveScenario(name)}
